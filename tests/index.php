@@ -7,7 +7,7 @@
  */
 
 // require
-require_once '../yelp.php';
+require_once('../yelp.php');
 
 // define variables
 $consumerKey = '';
