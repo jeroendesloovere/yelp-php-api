@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Yelp API test
+ *
+ * @author Jeroen Desloovere <jeroen@siesqo.be>
+ */
+
+// require
+require_once '../yelp.php';
+
+// define variables
+$consumer = '';
+$consumerSecret = '';
+$token = '';
+$tokenSecret = '';
+
+// define API
+$API = new Yelp();
+
+// search for business
+$results = $API->searchForBusiness('the-waterboy-sacramento');
+
+// search for term (at a location)
+$results = $API->searchForTerm('taco', 'sf');
+
+// show results
+print_r($results);
