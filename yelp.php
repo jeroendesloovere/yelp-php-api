@@ -76,7 +76,7 @@ class Yelp
 		$unsignedUrl = API_URL . API_VERSION . '/' . $url;
 
 		// if data is set, add to url
-		if(!empty($data)) $unsignedUrl .= http_build_query($data);
+		if(!empty($data)) $unsignedUrl .= '?' . http_build_query($data);
 
 		// token object built using the OAuth library
 		$token = new OAuthToken($this->token, $this->tokenSecret);
