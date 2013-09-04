@@ -70,7 +70,7 @@ class Yelp
 	private function doCall($url, $data = null)
 	{
 		// enter the path that the oauth library is in relation to the php file
-		require_once ('oauth.php');
+		require_once('oauth.php');
 
 		// define unsigned url
 		$unsignedUrl = API_URL . API_VERSION . '/' . $method;
