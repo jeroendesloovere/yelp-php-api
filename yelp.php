@@ -142,7 +142,7 @@ class Yelp
 		// if location is defined
 		if($location !== null) $data['location'] = $location;
 
-		// return results
+		// do call
 		return $this->doCall($url, $data);
 	}
 }
