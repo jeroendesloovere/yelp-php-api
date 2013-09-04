@@ -55,10 +55,10 @@ class Yelp
 	 */
 	public function __construct($consumerKey, $consumerSecret, $token, $tokenSecret)
 	{
-		$this->consumerKey = $consumerKey;
-		$this->consumerSecret = $consumerSecret;
-		$this->token = $token;
-		$this->tokenSecret = $tokenSecret;
+		$this->consumerKey = (string) $consumerKey;
+		$this->consumerSecret = (string) $consumerSecret;
+		$this->token = (string) $token;
+		$this->tokenSecret = (string) $tokenSecret;
 	}
 
 	/**
