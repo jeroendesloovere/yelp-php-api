@@ -1,4 +1,3 @@
-yelp-PHP-API
-============
+# Yelp PHP API class
 
-This Yelp PHP API can search for businesses.
+This Yelp PHP API can search for businesses and terms at a certain location.
