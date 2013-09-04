@@ -73,7 +73,10 @@ class Yelp
 		require_once('oauth.php');
 
 		// define unsigned url
-		$unsignedUrl = API_URL . API_VERSION . '/' . $method;
+		$unsignedUrl = API_URL . API_VERSION . '/' . $url;
+
+		// if data is set, add to url
+		if(!empty($data)) $unsignedUrl .= http_build_query($data);
 
 		// token object built using the OAuth library
 		$token = new OAuthToken($this->token, $this->tokenSecret);
