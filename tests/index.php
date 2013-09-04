@@ -10,13 +10,13 @@
 require_once '../yelp.php';
 
 // define variables
-$consumer = '';
+$consumerKey = '';
 $consumerSecret = '';
 $token = '';
 $tokenSecret = '';
 
 // define API
-$API = new Yelp();
+$API = new Yelp($consumerKey, $consumerSecret, $token, $tokenSecret);
 
 // search for business
 $results = $API->searchForBusiness('the-waterboy-sacramento');
