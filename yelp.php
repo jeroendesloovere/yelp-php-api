@@ -14,8 +14,8 @@ class Yelp
 	// API version
 	const API_VERSION = 'v2';
 
-    // current version
-    const VERSION = '0.0.1';
+	// current version
+	const VERSION = '0.0.1';
 
 	/**
 	 * Consumer key
