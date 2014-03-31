@@ -66,13 +66,13 @@ class Yelp
     /**
      * Do call
      *
-     * @param string $url The URL to call.
+     * @param string          $url  The URL to call.
      * @param array[optional] $data The data to pass.
      */
     private function doCall($url, $data = null)
     {
         // enter the path that the oauth library is in relation to the php file
-        require_once('oauth.php');
+        require_once 'oauth.php';
 
         // define unsigned url
         $unsignedUrl = API_URL . API_VERSION . '/' . $url;
@@ -104,7 +104,7 @@ class Yelp
         curl_setopt($ch, CURLOPT_HEADER, 0);
 
         // Yelp response
-        $data = curl_exec($ch); 
+        $data = curl_exec($ch);
 
         // close connection
         curl_close($ch);
@@ -130,7 +130,7 @@ class Yelp
     /**
      * Search for term
      *
-     * @param string $term
+     * @param string           $term
      * @param string[optional] $location
      */
     public function searchForTerm($term, $location = null)
@@ -148,7 +148,6 @@ class Yelp
         return $this->doCall($url, $data);
     }
 }
-
 
 /**
  * Yelp API Exception
